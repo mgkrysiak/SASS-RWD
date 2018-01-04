@@ -1,0 +1,86 @@
+// Zadanie 1
+// body {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+
+
+  // .test_units {
+  //  font-size: 30px;
+  //  width: 25em;
+  //  height: 5em;
+  //  border: 2px solid magenta;
+  //
+  //    header{
+  //     font-size: 50%;
+  //     span {
+  //       font-size: 1em;
+  //     }
+  //  }
+  // }
+
+
+//zad2
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+        .blocks {
+        width: 100%;
+        height: 100%;
+        flex-wrap: wrap;
+        display: flex;
+
+            .block {
+            width: 25%;
+            height: 100vh;
+            border: 1px solid red;
+            // display: inline-flex;
+          }
+    }
+    @media screen and (max-width: 450px) {
+      .blocks {
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+          }
+          .block:nth-child(4) {
+            display: none;
+          }
+
+    }
+    @media (min-width: 451px) and (max-width: 720px){
+      .block:nth-child(5) {
+        display: inline;
+      }
+      .block:nth-child(1) {
+        display: none;
+      }
+    }
+    @media (min-width: 721px) and (max-width: 1024px){
+      .block:nth-child(2){
+        display: none;
+      }
+        .block:nth-child(3){
+          display: none;
+        }
+          .block:nth-child(4){
+            display: none;
+          }
+      .block:nth-child(5){
+        display: block;
+        background: pink;
+      }
+      .block:nth-child(1){
+        display: block;
+        background: pink;
+      }
+
+    }
+}

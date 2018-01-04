@@ -1,0 +1,52 @@
+// $colors: pink, beige, blue, red;
+// $widths: (
+// main: 1000px,
+// half: 50%,
+// semi: 700px
+// );
+//
+// body{
+//   background: nth($colors, 2);
+//   width: map-get($widths, main);
+// }
+//
+// header{
+//   background: nth($colors, 1);
+//   width: map-get($widths, half);
+// }
+//
+// section.main-width{
+//   background: nth($colors, 3);
+//   width: map-get($widths, semi);
+// }
+
+//zad1
+$colorss: (
+main: lightblue,
+second-color: lightpink,
+footer: beige,
+header: lightgreen,
+text: purple
+);
+
+body {
+  background-color: map-get($colorss, main);
+  color: map-get($colorss, text);
+}
+
+footer{
+  background-color: map-get($colorss, footer);
+
+}
+
+//zad2
+$width2: (
+  min-width: 500px,
+  max-width: 1000px
+);
+
+$variable: map-values($width2);
+
+p{
+  width: nth($variable, 1);
+}

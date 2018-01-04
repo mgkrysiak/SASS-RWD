@@ -1,0 +1,43 @@
+//zad z wykladowca
+
+$lighten-color: lighten(red, 40%);
+
+p{
+  color: $lighten-color;
+}
+$font-base: 16px;
+$colors: red, blue, pink, yellow;
+@for $i from 1 through 4{
+  h#{$i}{
+    font-size: $font-base * 4/$i;
+    background: lighten(red, 15% * ($i - 1));
+  }
+}
+
+//zad1
+$number: percentage(5);
+
+p{
+  font-size: $number;
+}
+
+//zad2
+$color1: #8FC2FF;
+$color2: #F0ACE8;
+
+$mixed-color: mix($color1, $color2);
+
+p{
+  background: $mixed-color;
+}
+
+//zad3
+@function suma($number1, $number2) {
+  @return ($number1 + $number2)
+};
+
+$font: suma(10,20);
+
+p{
+  font-weight: $font;
+}

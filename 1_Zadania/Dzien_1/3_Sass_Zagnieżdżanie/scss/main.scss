@@ -1,0 +1,58 @@
+$main-color: blue;
+$second-color: red;
+//.main-width {
+//width: 1000px;//
+//   li.l1 {
+//     &:first-child {
+//       color: red;
+//     }
+//   }
+// }
+
+header {
+  border: 2px;
+  border-color: $second-color;
+  border-style: solid;
+}
+
+.menu {
+  background-color: $main-color;
+  height: 100px;
+}
+
+.menu {
+  li {
+    float: left;
+    padding-left: 10px;
+  }
+}
+
+.links {
+  li {
+    &:first-child {
+      color: orange;
+    }
+
+    &:last-child {
+      color: green;
+    }
+
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+.menu {
+  li {
+    float: left;
+
+    &:hover {
+      background: pink;
+    }
+
+    &:last-child {
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+article{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: stretch;
+  section{
+    width: 100px;
+    min-height: 100px;
+    margin: 10px;
+    background: #abc;
+    flex-grow: 0;
+    &.big{
+      flex-grow: 1;
+    }
+  }
+}
+//zad1
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+//zad2
+@mixin circles {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.circles {
+  @include circles;
+  .circle {
+    border-radius: 50%;
+    background: pink;
+    height: 100px;
+    width: 100px;
+  }
+}

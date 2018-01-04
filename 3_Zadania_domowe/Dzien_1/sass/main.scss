@@ -1,0 +1,36 @@
+// Zadanie 1
+@mixin setTooltip($text, $color) {
+  &:before, &:after {
+  border-style: 1px solid gray;
+  width: 50px;
+  height: 20px;
+  content: $text;
+  display: block;
+  position: absolute;
+  background: $color;
+  }
+
+}
+
+.lista{
+li {
+  &:hover {
+  @include setTooltip('Hejka', green)
+  width: 20px;
+
+}
+}
+}
+// Zadanie 2
+$font-sizes: (
+ fs1: 100px,
+ fs2: 50px,
+ fs3: 6px
+ );
+
+ $fonts: map-values($font-sizes);
+
+ @for $i from 1 through 3 {
+   h#{$i}{nth//
+
+ }

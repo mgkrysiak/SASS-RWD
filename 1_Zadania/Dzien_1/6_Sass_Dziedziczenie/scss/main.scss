@@ -1,0 +1,65 @@
+//zad z wykladowca
+
+%box{
+  float: left;
+  width: 50%;
+  height: 100px;
+}
+ %clearfix{
+   content: '';
+   clear: both;
+   display: block;
+ }
+
+section.test-mixin{
+  width: 100%;
+  margin-bottom: 50px;
+  &:before{
+    @extend %clearfix;
+  }
+  &:after{
+    @extend %clearfix;
+
+  }
+  .left_box{
+    @extend %box;
+    background: red;
+  }
+  .right_box{
+    @extend %box;
+    background: green;
+  }
+}
+
+//zad1
+// %acolor {
+//    color:	#666;
+// }
+// #admin	.nav	a
+// {@extend %acolor}
+//
+// #demo	.body	.link
+// { @extend	%acolor; }
+
+//zad2
+%boxes {
+  width: 400px;
+  height: 150px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+}
+
+.success {
+  @extend %boxes;
+  background: yellow;
+}
+
+.error {
+  @extend %boxes;
+  background: pink;
+}
+
+.info {
+@extend %boxes;
+background: lightblue;
+}
